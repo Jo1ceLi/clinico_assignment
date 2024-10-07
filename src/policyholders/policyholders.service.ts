@@ -37,8 +37,8 @@ export class PolicyholdersService {
       r: [],
     };
 
-    let leftCodes = [];
-    let rightCodes = [];
+    const leftCodes = [];
+    const rightCodes = [];
 
     if (left) {
       result.l.push(left);
@@ -52,7 +52,7 @@ export class PolicyholdersService {
     const layer = 4;
     for (let i = 2; i < layer; i++) {
       //left
-      let l = [];
+      const l = [];
       while (leftCodes.length > 0) {
         const parentCode = leftCodes.pop();
         const children = await this.policyHoldersRepo.findBy({
@@ -64,7 +64,7 @@ export class PolicyholdersService {
       result.l.push(...l);
 
       //right
-      let r = [];
+      const r = [];
       while (rightCodes.length > 0) {
         const parentCode = rightCodes.pop();
         const children = await this.policyHoldersRepo.findBy({

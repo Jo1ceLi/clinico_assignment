@@ -1,4 +1,4 @@
-import { Policyholders } from "src/entities/policyholders.entity";
+import { Policyholders } from 'src/entities/policyholders.entity';
 
 export const seed: Policyholders[] = [
   {
@@ -82,7 +82,7 @@ export const seed: Policyholders[] = [
     isLeftChild: true,
   },
   {
-    code: '00011',
+    code: '0011',
     name: '保戶11',
     registrationDate: new Date(),
     introducerCode: '0002',
@@ -115,11 +115,27 @@ export const seed: Policyholders[] = [
     isLeftChild: true,
   },
   {
-    code: '00015',
+    code: '0015',
     name: '保戶15',
     registrationDate: new Date(),
     introducerCode: '0007',
     parentCode: '0007',
+    isLeftChild: false,
+  },
+  {
+    code: '0016',
+    name: '保戶16',
+    registrationDate: new Date(),
+    introducerCode: '0001',
+    parentCode: '0008',
+    isLeftChild: true,
+  },
+  {
+    code: '0017',
+    name: '保戶17',
+    registrationDate: new Date(),
+    introducerCode: '0001',
+    parentCode: '0008',
     isLeftChild: false,
   },
 ];
